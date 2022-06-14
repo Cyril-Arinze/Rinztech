@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RinzTech official webpage</title>
+
+    <!-- Bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/128165c695.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Londrina+Outline&family=Montserrat&family=Notable&display=swap"
+        rel="stylesheet">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <!-- My Navbar Starts here -->
+    <nav class="navbar bg-light sticky-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand brand-name me-5" href="#Home">Rinz<span class="tech-span">Tech</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#myNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start my-offcanvas" tabindex="-1" id="myNav">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title brand-name" id="myNavLabel"><a class="navbar-brand" href="#Home">Rinz<span class="tech-span">Tech</span></a></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body justify-content-between">
+                    <div>
+                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                            <li class="nav-item me-lg-4">
+                                <a class="nav-link" href="#Home"><i class="bi bi-house-fill"></i> Home</a>
+                            </li>
+                            <li class="nav-item me-lg-4">
+                                <a class="nav-link" href="#Features"><i class="bi bi-diagram-3-fill"></i> Features</a>
+                            </li>
+                            <li class="nav-item me-lg-4">
+                                <a class="nav-link" href="#Pricing-Product"> <i class="bi bi-tags-fill"></i> Products</a>
+                            </li>
+                            <li class="nav-item me-lg-4">
+                                <a class="nav-link" href="#contact"><i class="bi bi-person-lines-fill"></i> Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button class="btn btn-outline-primary nav-btn home-btns"> <i class="bi bi-cart3"></i>
+                            Cart</button>
+                        <button data-bs-toggle="modal" data-bs-target="#LoginModal"
+                            class="btn btn-outline-primary nav-btn home-btns"><i
+                                class="bi bi-box-arrow-in-right"></i></i>
+                            Login</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- My Navbar Ends here -->
+
+
+    <!-- My Modal -->
+    <!-- Login modal start here -->
+    <div class="modal fade" id="LoginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="LoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="LoginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-12 col-sm-3 mb-sm-3">
+                                <label for="username" class="col-form-label"> UserName</label>
+                            </div>
+                            <div class="col-12 col-sm-9">
+                                <input type="text" name="username" id="username" placeholder="Enter Username"
+                                    class="form-control">
+                            </div>
+                            <div class="col-12 col-sm-3 mb-sm-3">
+                                <label for="Password" class="col-form-label">Password</label>
+                            </div>
+                            <div class="col-12 col-sm-9">
+                                <input type="password" name="password" id="password" placeholder="Enter Password"
+                                    class="form-control">
+                            </div>
+                            <div class="col-12 col-sm-6 offset-sm-3 my-3 d-flex align-items-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="RememberPassword">
+                                    <label class="form-check-label" for="RememberPassword">
+                                        Remember Password
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-3 my-sm-3">
+                                <div class="d-grid col-12">
+                                    <button type="submit" class="btn btn-primary home-btns">Login</button>
+                                </div>
+                            </div>
+                            <div class="col-5 col-sm-4 offset-sm-3 mt-3">
+                                <p> <a href="">Register Now</a></p>
+                            </div>
+                            <div class="col-7 col-sm-5 mt-3">
+                                <p> <a href="">Forgot password?</a></p>
+                            </div>
+                            <div class="col-5">
+                                <hr class="login-hr">
+                            </div>
+                            <div class="col-2 text-center">
+                                <p>or</p>
+                            </div>
+                            <div class="col-5">
+                                <hr class="login-hr">
+                            </div>
+                            <div class="d-grid col-12">
+                                <div class="col-12 d-flex justify-content-center mt-3">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn fb-color-dark home-btns"><i
+                                                class="bi bi-facebook"></i></button>
+                                        <button type="button" class="btn fb-color home-btns">LOGIN WITH FACEBOOK</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-3">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn google-color-dark home-btns"><i
+                                                class="bi bi-google"></i></button>
+                                        <button type="button" class="btn google-color home-btns">LOGIN WITH GOOGLE</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-3">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn tweep-color-dark home-btns"><i
+                                                class="bi bi-twitter"></i></button>
+                                        <button type="button" class="btn tweep-color home-btns">LOGIN WITH TWITTER</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login modal start here -->
+
+    <main>
+        <!--****************************** Home section begins here ************************************ -->
+        <section id="Home" class="Home-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 order-md-last align-self-center">
+                        <img class="img-fluid" src="Image/home-img.png" alt="">
+                    </div>
+                    <div class="col-12 col-md-6 align-self-center">
+                        <h1>RinzTech Smartwatch</h1>
+                        <p>RinzTech Smartwatch has a new look. Remodelled and re-engineered to make it easier for you to
+                            stay active, keep fit, healthy, and connected.</p>
+                        <div class="row">
+
+                            <div class="col-12 col-sm-6">
+                                <div class="d-grid col-7 col-sm-12 col-lg-10 mt-3 mx-auto">
+                                    <a class="btn btn-primary py-2 py-lg-3 home-btns" href="#Pricing-Product"><i
+                                            class="bi bi-shop"></i> SHOP NOW</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="d-grid  col-7  col-sm-12 col-lg-10 mt-3 mx-auto">
+                                    <a class="btn btn-primary py-2 py-lg-3 home-btns" href="#Features"><i
+                                            class="bi bi-eye-fill"></i> SEE MORE</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--****************************** Features section begins here ************************************ -->
+        <section id="Features" class="feature-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="py-3 pb-5">PRODUCT'S HIGHLIGHT</h2>
+                    </div>
+                    <div class="row">
+                        <div
+                            class="col-12  col-md-6  order-lg-2 order-md-first align-self-center d-flex justify-content-end">
+                            <img class="img-fluid align-self-start" src="image/4669580 copy.svg" alt="">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 order-lg-1 order-md-last">
+                            <p> <i class="bi bi-phone-fill"></i><i class="fa-solid fa-tablet-screen-button fa-xl"></i>
+                                Built-in sports apps include
+                                GPS-enabled running, biking, swimming, skiing, rowing and
+                                golfing</p>
+                            <p> <i class="fa-solid fa-battery-full fa-xl"></i> Up to 8 days' battery life in
+                                watch/activity tracking mode or up to 13 hours using GPS</p>
+                            <p> <i class="fa-solid fa-bell fa-xl"></i> Smart notifications and smart coaching from
+                                Garmin Connect™ when paired with your phone</p>
+                        </div>
+                        <div class="col-12 col-lg-3 d-none d-lg-block order-lg-3">
+                            <p><i class="fa-solid fa-compass fa-xl"></i> Built-in sports apps include
+                                GPS-enabled running, biking, swimming, skiing, rowing and
+                                golfing</p>
+                            <p> <i class="fa-solid fa-bolt fa-xl"></i> Up to 8 days' battery life in
+                                watch/activity tracking mode or up to 13 hours using GPS</p>
+                            <p> <i class="fa-solid fa-comment-sms"></i> Smart notifications and smart coaching from
+                                Garmin Connect™ when paired with your phone</p>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <h3 class="py-3 pb-2">FEATURES OF THE DESIGN</h3>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-6 col-md-5">
+                            <img class="img-fluid align-self-start" src="Image/features2.png" alt="">
+                        </div>
+                        <div class="col-12 col-lg-5 col-md-7 offset-lg-1 order-md-first">
+                            <ul>
+
+                                <li>
+                                    Arsenic-free glass
+                                </li>
+                                <li>
+                                    Mercury-free
+                                </li>
+                                <li>
+                                    PVC-free
+                                </li>
+                                <li>
+                                    Beryllium-free
+                                </li>
+                                <li>
+                                    Low-carbon aluminum process
+                                </li>
+                                <li>
+                                    REACH regulation on nickel
+                                </li>
+                                <li>
+                                    Eco-friendly packaging
+                                </li>
+                                <li>
+                                    Fundamentally redesigned and re‑engineered with the largest display yet. Advanced
+                                    heart
+                                    monitoring capabilities.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--****************************** Pricing-Product section begins here ************************************ -->
+        <section id="Pricing-Product" class="pricing-products">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="py-3 pb-5">PRODUCTS</h2>
+                    </div>
+                    <div class="col-12">
+                        <!-- Product Carousel starts here -->
+                        <div id="productCarousel" class=" productCarousel carousel slide " data-bs-ride="carousel"
+                            data-bs-interval="10000">
+                            <div class="carousel-indicators mt-5">
+                                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active ">
+                                    <div class="row d-flex pe-lg-5  justify-content-center">
+                                        <div
+                                            class="col-12 col-md-6 col-lg-4 mb-3 offset-md-0 d-flex justify-content-center">
+                                            <div class="card mid-card align-items-center">
+                                                <img src="Image/product3.png" class="card-img-top img-fluid product-img"
+                                                    alt="">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">RinzWatch1 <span
+                                                            class="badge text-bg-danger">New</span> <span
+                                                            class="badge rounded-pill text-bg-warning">-20%</span></h5>
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title and
+                                                        make up the bulk of the card's content.</p>
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary me-3 home-btns"><i
+                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                                class="bi bi-cart3"></i> Cart</a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-4  mb-3 d-flex justify-content-center">
+                                            <div class="card mid-card align-items-center">
+                                                <img src="Image/product2.png" class="card-img-top img-fluid product-img"
+                                                    alt="">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">RinzWatch1</h5>
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title and
+                                                        make up the bulk of the card's content.</p>
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary me-3 home-btns"><i
+                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                                class="bi bi-cart3"></i> Cart</a>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4  mb-3 d-flex justify-content-center">
+                                            <div class="card mid-card align-items-center">
+                                                <img src="Image/product11.png"
+                                                    class="card-img-top img-fluid product-img" alt="">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">RinzWatch1</h5>
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title and
+                                                        make up the bulk of the card's content.</p>
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary home-btns me-3"><i
+                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                                class="bi bi-cart3"></i> Cart</a>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row d-flex pe-lg-5 justify-content-center">
+                                        <div
+                                            class="col-12 col-md-6 col-lg-4 mb-3 offset-md-0 d-flex justify-content-center">
+                                            <div class="card mid-card align-items-center">
+                                                <img src="Image/product11.png"
+                                                    class="card-img-top img-fluid product-img" alt="">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">RinzWatch1 <span
+                                                            class="badge text-bg-danger">New</span> <span
+                                                            class="badge rounded-pill text-bg-warning">-20%</span></h5>
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title and
+                                                        make up the bulk of the card's content.</p>
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary home-btns me-3"><i
+                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                                class="bi bi-cart3"></i> Cart</a>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-4  mb-3 d-flex justify-content-center">
+                                            <div class="card mid-card align-items-center">
+                                                <img src="Image/product3.png" class="card-img-top img-fluid product-img"
+                                                    alt="">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">RinzWatch1</h5>
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title and
+                                                        make up the bulk of the card's content.</p>
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary home-btns me-3"><i
+                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                                class="bi bi-cart3"></i> Cart</a>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4  mb-3 d-flex justify-content-center">
+                                            <div class="card mid-card align-items-center">
+                                                <img src="Image/product2.png" class="card-img-top img-fluid product-img"
+                                                    alt="">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">RinzWatch1</h5>
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title and
+                                                        make up the bulk of the card's content.</p>
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary home-btns me-3"><i
+                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                                class="bi bi-cart3"></i> Cart</a>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row d-flex pe-lg-5  justify-content-center">
+                                        <div
+                                            class="col-12 col-md-6 col-lg-4 mb-3 offset-md-0 d-flex justify-content-center">
+                                            <div class="card mid-card align-items-center">
+                                                <img src="Image/product3.png" class="card-img-top img-fluid product-img"
+                                                    alt="">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">RinzWatch1 <span
+                                                            class="badge text-bg-danger">New</span> <span
+                                                            class="badge rounded-pill text-bg-warning">-20%</span></h5>
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title and
+                                                        make up the bulk of the card's content.</p>
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary me-3 home-btns"><i
+                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                                class="bi bi-cart3"></i> Cart</a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-4  mb-3 d-flex justify-content-center">
+                                            <div class="card mid-card align-items-center">
+                                                <img src="Image/product2.png" class="card-img-top img-fluid product-img"
+                                                    alt="">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">RinzWatch1</h5>
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title and
+                                                        make up the bulk of the card's content.</p>
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary me-3 home-btns"><i
+                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                                class="bi bi-cart3"></i> Cart</a>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4  mb-3 d-flex justify-content-center">
+                                            <div class="card mid-card align-items-center">
+                                                <img src="Image/product11.png"
+                                                    class="card-img-top img-fluid product-img" alt="">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">RinzWatch1</h5>
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title and
+                                                        make up the bulk of the card's content.</p>
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary home-btns me-3"><i
+                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                                class="bi bi-cart3"></i> Cart</a>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product carousel ends here -->
+                    </div>
+                </div>
+
+
+                <!-- Product comparison starts here -->
+                <div class="text-center">
+                    <h3 class="py-3 pb-2">WATCHES COMPARISON</h3>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>&nbsp</th>
+                                <td class="text-center"><img class="img-fluid cp-img" src="image/features2.png" alt="">
+                                </td>
+                                <td class="text-center"><img class="img-fluid cp-img" src="image/product2.png" alt="">
+                                </td>
+                                <td class="text-center"><img class="img-fluid cp-img" src="image/product33.png" alt="">
+                                </td>
+                                <td class="text-center"><img class="img-fluid cp-img" src="image/product11.png" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp</th>
+                                <td class="text-center">
+                                    <h6>RinzWatch1</h6>
+                                </td>
+                                <td class="text-center">
+                                    <h6>RinzWatch1</h6>
+                                </td>
+                                <td class="text-center">
+                                    <h6>RinzWatch1</h6>
+                                </td>
+                                <td class="text-center">
+                                    <h6>RinzWatch1</h6>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <th>Color display</th>
+                                <td class="text-center">Yes</td>
+                                <td class="text-center">Yes</td>
+                                <td class="text-center">Yes</td>
+                                <td class="text-center">Yes</td>
+                            </tr>
+
+                            <tr>
+                                <th>Auto Pause®</th>
+                                <td class="text-center">Yes</td>
+                                <td class="text-center">Yes</td>
+                                <td class="text-center">Yes</td>
+                                <td class="text-center">Yes</td>
+                            </tr>
+
+                            <tr>
+                                <th>Heart rate-based calorie computation</th>
+                                <td class="text-center">Yes</td>
+                                <td class="text-center">Yes</td>
+                                <td class="text-center">--</td>
+                                <td class="text-center">Yes</td>
+                            </tr>
+
+                            <tr>
+                                <th>Customizable screen(s)</th>
+                                <td class="text-center">Yes</td>
+                                <td class="text-center">Yes</td>
+                                <td class="text-center">--</td>
+                                <td class="text-center">Yes</td>
+                            </tr>
+
+                            <tr>
+                                <th>Recovery advisor</th>
+                                <td class="text-center">Yes</td>
+                                <td class="text-center">--</td>
+                                <td class="text-center">Yes</td>
+                                <td class="text-center">Yes</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Product comparison ends here -->
+
+            </div>
+        </section>
+
+        <!--****************************** testimonial section begins here ************************************ -->
+
+        <section id="testimonails" class="testimonails-section">
+            <div class="container">
+                <div>
+                    <h2 class=" text-center pb-5">CUSTOMER'S REVIEW</h2>
+                </div>
+                <div id="testimonialCarousel" class="carousel slide test-car" data-bs-ride="carousel"
+                    data-bs-interval="10000">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex align-items-center row">
+                                <div
+                                    class="flex-shrink-0 col-12 col-md-2 offset-md-1 me-0 d-flex justify-content-center">
+                                    <img class="img-thumbnail testimonial-image" src="Image/lady-img.jpg" alt="...">
+                                </div>
+                                <div class="flex-grow-1 col-12 col-md-8">
+                                    <div class="d-flex justify-content-center justify-content-md-start">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star"></i>
+                                    </div>
+                                    <p class="testimonial-text">It's like having a personal trainer who understands how you work out — from running to yoga to swimming — and displays every metric you need right on your wrist. It's Designed For The Athlete In All Of Us, With Innovations From Start To Finish Line.</p>
+                                    <h6 class="text-center"><em>--Joyce, Pro Athlete--</em></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex align-items-center row">
+                                <div
+                                    class="flex-shrink-0 col-12 col-md-2 offset-md-1 me-0 d-flex justify-content-center">
+                                    <img class="img-thumbnail testimonial-image" src="Image/dog-img.jpg" alt="...">
+                                </div>
+                                <div class="flex-grow-1 col-12 col-md-8">
+                                    <div class="d-flex justify-content-center justify-content-md-start">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="testimonial-text">This is fantastic; I was previously using a different
+                                        brand, but they would not stay clipped and would fall off my wrist during rucks,
+                                        hikes, and runs. I desperately desired a watch-type. This smartwatch meets all
+                                        of my hiking needs.</p>
+                                    <h6 class="text-center"><em>--Ruben, Hiker--</em></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-md-2 col-lg-1 offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#Home"> Home</a></li>
+                        <li><a href="#Features"> Features</a></li>
+                        <li><a href="#Pricing-Product"> Products</a></li>
+                        <li><a href="#contact"> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-md-5 col-lg-3 ps-md-5">
+                    <h5> Contact Address </h5>
+                    <address>
+                        <p><i class="fa fa-location-dot fa-lg"></i> : 121,Clear water Bay Road Clear Water Bay, Kogi
+                            Nigeria <br>
+                            <i class="fa fa-phone fa-lg"></i> : +234 810 635 7525<br>
+                            <i class="fa fa-whatsapp fa-lg"></i> : +234 810 635 7525<br>
+                            <i class="fa fa-envelope fa-lg"></i> : <a
+                                href="mailto:ejicyrilarinze@gmail.com">RinzTech@info.net</a>
+                        </p>
+                    </address>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 text-center text-md-start mt-3 mt-md-0">
+                    <h5> Connect with us</h5>
+                    <a class="mt-3 btn btn-outline-primary" href="http://google.com/+"><i
+                            class="fa fa-google-plus"></i></a>
+                    <a class="mt-3 btn btn-outline-primary" href="http://www.facebook.com/profile.php?id="><i
+                            class="fa fa-facebook"></i></a>
+                    <a class="mt-3 btn btn-outline-primary" href="http://www.linkedin.com/in/"><i
+                            class="fa fa-linkedin"></i></a>
+                    <a class="mt-3 btn btn-outline-primary" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="mt-3 btn btn-outline-primary" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                </div>
+                <div class="col-12 col-md-8 col-lg-4 offset-md-2 offset-lg-0 text-center text-lg-start mt-3 mt-md-0">
+                    <h5>Newsletter</h5>
+                    <p>Do you want to subscribe to our Newsletter?</p>
+                    <form action="#">
+                        <div class="input-group">
+                            <input type="email" class="form-control sub-btn" placeholder="Your e-mail address">
+                            <button class="btn btn-outline-primary sub-btn" type="submit" id="button-addon2"> <i
+                                    class="fa fa-arrow-right"></i> Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="col-12 text-center Copyright">
+        <p>© Copyright 2022 RinzTech Ltd. All rights reserved.</p>
+    </div>
+
+</body>
+
+</html>
