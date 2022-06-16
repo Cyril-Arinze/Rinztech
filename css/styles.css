@@ -60,6 +60,9 @@ h1,h2, h3, h4, h5, h6{
 .nav-link:hover{
   color:#0d6efd;
 }
+.here{
+  text-decoration: none;
+}
 
 /*********************** Home section ***************************/
 .Home-section{
