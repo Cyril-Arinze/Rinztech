@@ -12,31 +12,38 @@ h1,h2, h3, h4, h5, h6{
   background-color: #19181a;
   height: 4px;
 }
+.pass-w{
+  border-right: 0;
+}
+.p-eye, .p-eye:hover {
+  border-color:  #ced4da;
+  border-left:0;
+}
 .login-hr{
   min-width: 100%;
 
 }
-.fb-color{
+.fb-color, .fb-color:hover{
   background-color: #4267B2;
   color: white;
 }
-.fb-color-dark{
+.fb-color-dark,.fb-color-dark:hover{
   background-color: #2b4a8a;
   color: white
 }
-.google-color{
+.google-color, .google-color:hover {
   background-color: #DB4437;
   color: white
 }
-.google-color-dark{
+.google-color-dark, .google-color-dark:hover{
   background-color: #a53429;
   color: white
 }
-.tweep-color{
+.tweep-color, .tweep-color:hover{
   background-color:#1DA1F2;
   color: white
 }
-.tweep-color-dark{
+.tweep-color-dark, .tweep-color-dark:hover{
   background-color:#1481c5;
   color: white
 }
