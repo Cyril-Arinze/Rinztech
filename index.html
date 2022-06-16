@@ -26,41 +26,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Londrina+Outline&family=Montserrat&family=Notable&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Eczar:wght@800&family=Lato:ital@0;1&family=Londrina+Outline&family=Montserrat&family=Notable&display=swap"
         rel="stylesheet">
 
     <!-- My CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
+    <!-- My scripts -->
+    <script src="Scripts/script.js" defer></script>
+
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#my-nav" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
+    tabindex="0">
     <!-- My Navbar Starts here -->
-    <nav class="navbar bg-light sticky-top navbar-expand-lg">
+    <nav id="my-nav" class="navbar bg-light sticky-top navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand brand-name me-5" href="#Home">Rinz<span class="tech-span">Tech</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#myNav">Menu
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-start my-offcanvas" tabindex="-1" id="myNav">
+            <div class="offcanvas offcanvas-end my-offcanvas" tabindex="-1" id="myNav">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title brand-name" id="myNavLabel"><a class="navbar-brand" href="#Home">Rinz<span class="tech-span">Tech</span></a></h5>
+                    <h5 class="offcanvas-title brand-name" id="myNavLabel"><a class="navbar-brand"
+                            href="#Home">Rinz<span class="tech-span">Tech</span></a></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                 </div>
                 <div class="offcanvas-body justify-content-between">
                     <div>
                         <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                             <li class="nav-item me-lg-4">
-                                <a class="nav-link" href="#Home"><i class="bi bi-house-fill"></i> Home</a>
+                                <a class="nav-link active" href="#Home"><i class="bi bi-house-fill"></i> Home</a>
                             </li>
                             <li class="nav-item me-lg-4">
                                 <a class="nav-link" href="#Features"><i class="bi bi-diagram-3-fill"></i> Features</a>
                             </li>
                             <li class="nav-item me-lg-4">
-                                <a class="nav-link" href="#Pricing-Product"> <i class="bi bi-tags-fill"></i> Products</a>
+                                <a class="nav-link" href="#Pricing-Product"> <i class="bi bi-tags-fill"></i>
+                                    Products</a>
                             </li>
                             <li class="nav-item me-lg-4">
-                                <a class="nav-link" href="#contact"><i class="bi bi-person-lines-fill"></i> Contact Us</a>
+                                <a class="nav-link" href="#contact"><i class="bi bi-person-lines-fill"></i> Contact
+                                    Us</a>
                             </li>
                         </ul>
                     </div>
@@ -86,26 +93,35 @@
         aria-labelledby="LoginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="LoginModalLabel">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-header d-flex justify-content-between">
+                    <div>
+                        <h5 class="modal-title" id="LoginModalLabel">Login</h5>                        
+                    </div>
+                    <div>
+                        <a class="navbar-brand brand-name me-5" href="#Home">Rinz<span class="tech-span">Tech</span></a>
+                    </div>
+                    <div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                 </div>
                 <div class="modal-body">
-                    <form action="#">
+                    <form id="login-form" action="modal.php">
                         <div class="row">
                             <div class="col-12 col-sm-3 mb-sm-3">
-                                <label for="username" class="col-form-label"> UserName</label>
+                                <label for="username" class="col-form-label"><i class="bi bi-person-circle"></i>
+                                    Username</label>
                             </div>
                             <div class="col-12 col-sm-9">
                                 <input type="text" name="username" id="username" placeholder="Enter Username"
-                                    class="form-control">
+                                    class="form-control" required>
                             </div>
                             <div class="col-12 col-sm-3 mb-sm-3">
-                                <label for="Password" class="col-form-label">Password</label>
+                                <label for="Password" class="col-form-label"><i class="bi bi-shield-lock"></i>
+                                    Password</label>
                             </div>
                             <div class="col-12 col-sm-9">
                                 <input type="password" name="password" id="password" placeholder="Enter Password"
-                                    class="form-control">
+                                    class="form-control" required>
                             </div>
                             <div class="col-12 col-sm-6 offset-sm-3 my-3 d-flex align-items-center">
                                 <div class="form-check">
@@ -140,21 +156,24 @@
                                     <div class="btn-group" role="group">
                                         <button type="button" class="btn fb-color-dark home-btns"><i
                                                 class="bi bi-facebook"></i></button>
-                                        <button type="button" class="btn fb-color home-btns">LOGIN WITH FACEBOOK</button>
+                                        <button type="button" class="btn fb-color home-btns">LOGIN WITH
+                                            FACEBOOK</button>
                                     </div>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center mt-3">
                                     <div class="btn-group" role="group">
                                         <button type="button" class="btn google-color-dark home-btns"><i
                                                 class="bi bi-google"></i></button>
-                                        <button type="button" class="btn google-color home-btns">LOGIN WITH GOOGLE</button>
+                                        <button type="button" class="btn google-color home-btns">LOGIN WITH
+                                            GOOGLE</button>
                                     </div>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center mt-3">
                                     <div class="btn-group" role="group">
                                         <button type="button" class="btn tweep-color-dark home-btns"><i
                                                 class="bi bi-twitter"></i></button>
-                                        <button type="button" class="btn tweep-color home-btns">LOGIN WITH TWITTER</button>
+                                        <button type="button" class="btn tweep-color home-btns">LOGIN WITH
+                                            TWITTER</button>
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +185,7 @@
             </div>
         </div>
     </div>
-    <!-- login modal start here -->
+    <!-- login modal end here -->
 
     <main>
         <!--****************************** Home section begins here ************************************ -->
@@ -621,7 +640,10 @@
                                         <i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star"></i>
                                     </div>
-                                    <p class="testimonial-text">It's like having a personal trainer who understands how you work out — from running to yoga to swimming — and displays every metric you need right on your wrist. It's Designed For The Athlete In All Of Us, With Innovations From Start To Finish Line.</p>
+                                    <p class="testimonial-text"><i class="fa-solid fa-quote-left"></i>It's like having a personal trainer who understands how
+                                        you work out — from running to yoga to swimming — and displays every metric you
+                                        need right on your wrist. It's Designed For The Athlete In All Of Us, With
+                                        Innovations From Start To Finish Line.<i class="fa-solid fa-quote-right"></i></p>
                                     <h6 class="text-center"><em>--Joyce, Pro Athlete--</em></h6>
                                 </div>
                             </div>
@@ -640,10 +662,10 @@
                                         <i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star-fill"></i>
                                     </div>
-                                    <p class="testimonial-text">This is fantastic; I was previously using a different
+                                    <p class="testimonial-text"><i class="fa-solid fa-quote-left"></i>This is fantastic; I was previously using a different
                                         brand, but they would not stay clipped and would fall off my wrist during rucks,
                                         hikes, and runs. I desperately desired a watch-type. This smartwatch meets all
-                                        of my hiking needs.</p>
+                                        of my hiking needs.<i class="fa-solid fa-quote-right"></i></p>
                                     <h6 class="text-center"><em>--Ruben, Hiker--</em></h6>
                                 </div>
                             </div>
@@ -660,10 +682,10 @@
                 <div class="col-4 col-md-2 col-lg-1 offset-1">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#Home"> Home</a></li>
-                        <li><a href="#Features"> Features</a></li>
-                        <li><a href="#Pricing-Product"> Products</a></li>
-                        <li><a href="#contact"> Contact</a></li>
+                        <li><a href="#Home" class="nav-link"> Home</a></li>
+                        <li><a href="#Features" class="nav-link"> Features</a></li>
+                        <li><a href="#Pricing-Product" class="nav-link"> Products</a></li>
+                        <li><a href="#contact" class="nav-link"> Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-7 col-md-5 col-lg-3 ps-md-5">
@@ -674,7 +696,7 @@
                             <i class="fa fa-phone fa-lg"></i> : +234 810 635 7525<br>
                             <i class="fa fa-whatsapp fa-lg"></i> : +234 810 635 7525<br>
                             <i class="fa fa-envelope fa-lg"></i> : <a
-                                href="mailto:ejicyrilarinze@gmail.com">RinzTech@info.net</a>
+                                href="mailto:ejicyrilarinze@gmail.com" class="">RinzTech@info.net</a>
                         </p>
                     </address>
                 </div>

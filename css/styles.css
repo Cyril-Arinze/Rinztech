@@ -44,7 +44,7 @@ h1,h2, h3, h4, h5, h6{
 /* ******************************************* Navbar section ***************************/
 .brand-name{
   color: black;
-  font-family: cursive;
+  font-family: 'Eczar', serif;
 }
 .tech-span{
   color: #0d6efd;
@@ -60,15 +60,11 @@ h1,h2, h3, h4, h5, h6{
 .nav-link:hover{
   color:#0d6efd;
 }
-.nav-btn{
-  border: 0;
-}
-
 
 /*********************** Home section ***************************/
 .Home-section{
   background-color: #19181a;
-  padding: 3rem 0;
+  padding: 0 0 3rem;
 }
 .Home-section h1, .Home-section p{
   color: #EDE9E8;
@@ -165,6 +161,13 @@ footer{
   background-color: #19181a;
   color: #EDE9E8;
   font-size: .7rem;
+}
+#contact p, #contact a{
+  font-size: small;
+}
+
+.link-dark:hover{
+  color: #1DA1F2;
 }
 
 /**********************Medium screen query  */
