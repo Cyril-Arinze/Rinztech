@@ -39,55 +39,7 @@
 
 <body data-bs-spy="scroll" data-bs-target="#my-nav" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
     tabindex="0">
-    <!-- My Navbar Starts here -->
-    <nav id="my-nav" class="navbar bg-light sticky-top navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand brand-name me-5" href="#Home">Rinz<span class="tech-span">Tech</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#myNav">Menu
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end my-offcanvas" tabindex="-1" id="myNav">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title brand-name" id="myNavLabel"><a class="navbar-brand"
-                            href="#Home">Rinz<span class="tech-span">Tech</span></a></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-                </div>
-                <div class="offcanvas-body justify-content-between">
-                    <div>
-                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
-                            <li class="nav-item me-lg-4">
-                                <a class="nav-link active" href="#Home"><i class="bi bi-house-fill"></i> Home</a>
-                            </li>
-                            <li class="nav-item me-lg-4">
-                                <a class="nav-link" href="#Features"><i class="bi bi-diagram-3-fill"></i> Features</a>
-                            </li>
-                            <li class="nav-item me-lg-4">
-                                <a class="nav-link" href="#Pricing-Product"> <i class="bi bi-tags-fill"></i>
-                                    Products</a>
-                            </li>
-                            <li class="nav-item me-lg-4">
-                                <a class="nav-link" href="#contact"><i class="bi bi-person-lines-fill"></i> Contact
-                                    Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <button class="btn btn-outline-primary nav-btn home-btns"> <i class="bi bi-cart3"></i>
-                            Cart</button>
-                        <button data-bs-toggle="modal" data-bs-target="#LoginModal"
-                            class="btn btn-outline-primary nav-btn home-btns"><i
-                                class="bi bi-box-arrow-in-right"></i></i>
-                            Login</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- My Navbar Ends here -->
-
-
-    <!-- My Modal -->
+     <!-- My Modal -->
     <!-- Login modal start here -->
     <div class="modal fade" id="LoginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="LoginModalLabel" aria-hidden="true">
@@ -189,6 +141,71 @@
         </div>
     </div>
     <!-- login modal end here -->
+    <!-- Cart modal starts here -->
+    <div class="modal fade" id="CartModal" tabindex="-1" aria-labelledby="CartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="CartModalLabel"><i
+                class="bi bi-cart3 fa-xl"></i> Cart</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body cart-body row g-2">
+                <h3 id="cart1text">Cart is empty, select a product</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Card modal ends here -->
+
+    <!-- My Navbar Starts here -->
+    <nav id="my-nav" class="navbar bg-light sticky-top navbar-expand-lg pt-3">
+        <div class="container">
+            <a class="navbar-brand brand-name me-5" href="#Home">Rinz<span class="tech-span">Tech</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#myNav">Menu
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end my-offcanvas" tabindex="-1" id="myNav">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title brand-name" id="myNavLabel"><a class="navbar-brand"
+                            href="#Home">Rinz<span class="tech-span">Tech</span></a></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body justify-content-between">
+                    <div>
+                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                            <li class="nav-item me-lg-4">
+                                <a class="nav-link active" href="#Home"><i class="bi bi-house-fill"></i> Home</a>
+                            </li>
+                            <li class="nav-item me-lg-4">
+                                <a class="nav-link" href="#Features"><i class="bi bi-diagram-3-fill"></i> Features</a>
+                            </li>
+                            <li class="nav-item me-lg-4">
+                                <a class="nav-link" href="#Pricing-Product"> <i class="bi bi-tags-fill"></i>
+                                    Products</a>
+                            </li>
+                            <li class="nav-item me-lg-4">
+                                <a class="nav-link" href="#contact"><i class="bi bi-person-lines-fill"></i> Contact
+                                    Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a data-bs-toggle="modal" data-bs-target="#CartModal" class="btn btn-outline-primary nav-btn nav-btn1 home-btns position-relative"> <i class="bi bi-cart3 fa-lg"></i>
+                            Cart<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge visually-hidden">
+                                
+                              </span></a>
+                        <button data-bs-toggle="modal" data-bs-target="#LoginModal"
+                            class="btn btn-outline-primary nav-btn home-btns"><i
+                                class="bi bi-box-arrow-in-right"></i></i>
+                            Login</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- My Navbar Ends here -->
 
     <main>
         <!--****************************** Home section begins here ************************************ -->
@@ -336,7 +353,7 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary me-3 home-btns"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</a>
 
                                                     </div>
@@ -356,7 +373,7 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary me-3 home-btns"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</a>
 
                                                     </div>
@@ -376,7 +393,7 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary home-btns me-3"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</a>
 
                                                     </div>
@@ -403,7 +420,7 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary home-btns me-3"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</a>
 
                                                     </div>
@@ -424,7 +441,7 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary home-btns me-3"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</a>
 
                                                     </div>
@@ -444,7 +461,7 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary home-btns me-3"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</a>
 
                                                     </div>
@@ -471,7 +488,7 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary me-3 home-btns"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</a>
 
                                                     </div>
@@ -491,7 +508,7 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary me-3 home-btns"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</a>
 
                                                     </div>
@@ -511,7 +528,7 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary home-btns me-3"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns"> <i
+                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</a>
 
                                                     </div>
