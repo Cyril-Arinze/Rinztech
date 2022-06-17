@@ -73,8 +73,8 @@
       
       // Remove First Description in Cart
       var cart1Text=document.querySelector("#cart1text")
+      cart1Text.classList.add("visually-hidden")
 
-      cart.removeChild(cart1Text);
 
     });
   }
