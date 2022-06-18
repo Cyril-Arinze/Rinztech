@@ -37,16 +37,17 @@
   });
 
   //   add product to cart && Remove product from Chart
-    
 
   var Add2CartBtn = document.querySelectorAll(".cart-btn");
 
   for (let i = 0; i < Add2CartBtn.length; i++) {
     var numberOfItemInCart = 0;
-    
-    var cartBadge = document.querySelector(".cart-badge");
 
-    (cartBadge.innerHTML = numberOfItemInCart);
+    var cartBadge = document.querySelectorAll(".cart-badge");
+
+    for (let i = 0; i < cartBadge.length; i++) {
+      cartBadge[i].innerHTML = numberOfItemInCart;
+    }
 
     Add2CartBtn[i].addEventListener("click", function () {
       // Remove First Description in Cart
@@ -78,12 +79,16 @@
         var item2Remove = this.parentElement.parentElement.parentElement;
         item2Remove.remove();
 
-        var cartBadge = document.querySelector(".cart-badge");
+        var cartBadge = document.querySelectorAll(".cart-badge");
 
-        cartBadge.innerHTML = numberOfItemInCart;
+        for (let i = 0; i < cartBadge.length; i++) {
+          cartBadge[i].innerHTML = numberOfItemInCart;
+        }
 
         if (numberOfItemInCart == 0) {
-          cartBadge.classList.add("visually-hidden");
+          for (let i = 0; i < cartBadge.length; i++) {
+            cartBadge[i].classList.add("visually-hidden");
+          }
 
           var cart1Text = document.querySelector("#cart1text");
 
@@ -96,11 +101,13 @@
       // Number of item in cart
       numberOfItemInCart++;
 
-      var cartBadge = document.querySelector(".cart-badge");
+      var cartBadge = document.querySelectorAll(".cart-badge");
 
-      cartBadge.classList.remove("visually-hidden");
+      for (let i = 0; i < cartBadge.length; i++) {
+        cartBadge[i].classList.remove("visually-hidden");
 
-      cartBadge.innerHTML = numberOfItemInCart;
+        cartBadge[i].innerHTML = numberOfItemInCart;
+      }
 
       if (numberOfItemInCart > 9) {
         cartBadge.innerHTML = "9+";
@@ -134,35 +141,33 @@
 
   for (let i = 0; i < faIcons.length; i++) {
     faIcons[i].addEventListener("mouseover", function () {
-      var iconToAnimate=this
+      var iconToAnimate = this;
 
       iconToAnimate.classList.add("fa-beat");
 
       if (iconToAnimate.classList.contains("fa-bell")) {
         iconToAnimate.classList.remove("fa-beat");
-        iconToAnimate.classList.add("fa-shake")
-
+        iconToAnimate.classList.add("fa-shake");
       }
       if (iconToAnimate.classList.contains("fa-compass")) {
         iconToAnimate.classList.remove("fa-beat");
-        iconToAnimate.classList.add("fa-spin")
-
+        iconToAnimate.classList.add("fa-spin");
       }
     });
 
     faIcons[i].addEventListener("mouseout", function () {
-      var iconToAnimate=this
+      var iconToAnimate = this;
 
-      iconToAnimate.classList.remove("fa-beat")
-      if (iconToAnimate.classList.contains("fa-compass") || iconToAnimate.classList.contains("fa-bell")) {
-
-        iconToAnimate.classList.remove("fa-shake")
-        iconToAnimate.classList.remove("fa-spin")
-
+      iconToAnimate.classList.remove("fa-beat");
+      if (
+        iconToAnimate.classList.contains("fa-compass") ||
+        iconToAnimate.classList.contains("fa-bell")
+      ) {
+        iconToAnimate.classList.remove("fa-shake");
+        iconToAnimate.classList.remove("fa-spin");
       }
     });
   }
 
   var BootstrapIcons = document.querySelectorAll(".bi");
-
 })();
