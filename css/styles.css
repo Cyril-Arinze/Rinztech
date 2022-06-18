@@ -48,13 +48,14 @@ h1,h2, h3, h4, h5, h6{
   color: white
 }
 
-/* ******************************************* Navbar section ***************************/
+/******************************************** Navbar section ***************************/
 .brand-name{
   color: black;
-  font-family: 'Eczar', serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 .tech-span{
   color: #0d6efd;
+  margin-right: 1px;
 }
 .navbar-toggler {
   border: 0;
@@ -140,6 +141,9 @@ hr{
 .productCarousel{
   padding-bottom: 3rem;
   padding-top: .5rem;
+}
+.product-img{
+  max-width: 20vh;
 }
 /************************ Testimonial section *******************/
 .testimonails-section{

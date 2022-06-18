@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Eczar:wght@800&family=Lato:ital@0;1&family=Londrina+Outline&family=Montserrat&family=Notable&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&family=Eczar:wght@800&family=Lato:ital@0;1&family=Londrina+Outline&family=Pacifico&family=Montserrat&family=Notable&display=swap"
         rel="stylesheet">
 
     <!-- My CSS -->
@@ -39,7 +39,7 @@
 
 <body data-bs-spy="scroll" data-bs-target="#my-nav" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
     tabindex="0">
-     <!-- My Modal -->
+    <!-- My Modals -->
     <!-- Login modal start here -->
     <div class="modal fade" id="LoginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="LoginModalLabel" aria-hidden="true">
@@ -47,10 +47,10 @@
             <div class="modal-content">
                 <div class="modal-header d-flex justify-content-between">
                     <div>
-                        <h5 class="modal-title" id="LoginModalLabel">Login</h5>                        
+                        <h5 class="modal-title" id="LoginModalLabel">Login</h5>
                     </div>
                     <div>
-                        <a class="navbar-brand brand-name me-5" href="#Home">Rinz<span class="tech-span">Tech</span></a>
+                        <a class="navbar-brand brand-name me-5" href="#Home"><i class="fa-solid fa-microchip"></i>Rinz<span class="tech-span">Tech</span></a>
                     </div>
                     <div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -75,7 +75,7 @@
                                 <div class="input-group">
                                     <input type="password" name="password" id="password" placeholder="Enter Password"
                                         class="form-control pass-w" required>
-                                        <a class="btn p-eye"><i class=" eye-icon bi bi-eye"></i></a>
+                                    <a class="btn p-eye"><i class=" eye-icon bi bi-eye"></i></a>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6 offset-sm-3 my-3 d-flex align-items-center">
@@ -141,45 +141,55 @@
         </div>
     </div>
     <!-- login modal end here -->
+
     <!-- Cart modal starts here -->
     <div class="modal fade" id="CartModal" tabindex="-1" aria-labelledby="CartModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="CartModalLabel"><i
-                class="bi bi-cart3 fa-xl"></i> Cart</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body cart-body row g-2">
-                <div id="cart1text" class="text-center">
-                    <img src="Image/cart1.png" alt="" class="img-fluid">
-                    <h4>Your cart is empty</h4>
-                    <p>Browse our products and discover our best deal!</p>
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between">
+                    <div>
+                        <h5 class="modal-title" id="CartModalLabel"><i class="bi bi-cart3 fa-xl"></i> Cart</h5>
+                    </div>
+                    <div>
+                        <a class="navbar-brand brand-name me-5" href="#Home"><i class="fa-solid fa-microchip"></i>Rinz<span class="tech-span">Tech</span></a>
+                    </div>
+                    <div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div id="cart1text" class="text-center">
+                        <img src="Image/cart1.png" alt="" class="img-fluid">
+                        <h4>Your cart is empty</h4>
+                        <p>Browse our products and discover our best deal!</p>
+                    </div>
+                    <div class="row cart-body g-2 d-flex justify-content-center">
+
+                    </div>
                 </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
     <!-- Card modal ends here -->
 
     <!-- My Navbar Starts here -->
     <nav id="my-nav" class="navbar bg-light sticky-top navbar-expand-lg pt-lg-3">
         <div class="container">
-            <a class="navbar-brand brand-name me-5" href="#Home">Rinz<span class="tech-span">Tech</span></a>
+            <a class="navbar-brand brand-name me-5" href="#Home"><i class="fa-solid fa-microchip fa-lg"></i>Rinz<span class="tech-span">Tech</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#myNav">Menu
-                <span class="navbar-toggler-icon"></span>
+                <i class="bi bi-list fa-xl toggler-btn"></i>
             </button>
-            <div class="offcanvas offcanvas-end my-offcanvas" tabindex="-1" id="myNav">
+            <div class="offcanvas offcanvas-start my-offcanvas" tabindex="-1" id="myNav">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title brand-name" id="myNavLabel"><a class="navbar-brand"
-                            href="#Home">Rinz<span class="tech-span">Tech</span></a></h5>
+                            href="#Home"><i class="fa-solid fa-microchip"></i>Rinz<span class="tech-span">Tech</span></a></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                 </div>
                 <div class="offcanvas-body justify-content-between">
                     <div>
                         <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                             <li class="nav-item me-lg-4">
-                                <a class="nav-link active" href="#Home"><i class="bi bi-house-fill"></i> Home</a>
+                                <a class="nav-link active" href="#Home"><i class="bi bi-house-fill fa-beat"></i> Home</a>
                             </li>
                             <li class="nav-item me-lg-4">
                                 <a class="nav-link" href="#Features"><i class="bi bi-diagram-3-fill"></i> Features</a>
@@ -195,10 +205,13 @@
                         </ul>
                     </div>
                     <div>
-                        <a data-bs-toggle="modal" data-bs-target="#CartModal" class="btn btn-outline-primary nav-btn nav-btn1 home-btns position-relative"> <i class="bi bi-cart3 fa-lg"></i>
-                            Cart<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge visually-hidden">
-                                
-                              </span></a>
+                        <a data-bs-toggle="modal" data-bs-target="#CartModal"
+                            class="btn btn-outline-primary nav-btn nav-btn1 home-btns position-relative"> <i
+                                class="bi bi-cart3 fa-lg"></i>
+                            Cart<span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge visually-hidden">
+
+                            </span></a>
                         <button data-bs-toggle="modal" data-bs-target="#LoginModal"
                             class="btn btn-outline-primary nav-btn home-btns"><i
                                 class="bi bi-box-arrow-in-right"></i></i>
@@ -345,8 +358,7 @@
                                         <div
                                             class="col-12 col-md-6 col-lg-4 mb-3 offset-md-0 d-flex justify-content-center">
                                             <div class="card mid-card align-items-center">
-                                                <img src="Image/product3.png" class="card-img-top img-fluid product-img"
-                                                    alt="">
+                                                <img src="Image/product3.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
                                                     <h5 class="card-title text-center">RinzWatch1 <span
                                                             class="badge text-bg-danger">New</span> <span
@@ -357,8 +369,8 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary me-3 home-btns"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
-                                                                class="bi bi-cart3"></i> Cart</a>
+                                                        <button  class="btn btn-primary home-btns cart-btn"> <i
+                                                                class="bi bi-cart3"></i> Cart</button>
 
                                                     </div>
                                                 </div>
@@ -367,8 +379,7 @@
 
                                         <div class="col-12 col-md-6 col-lg-4  mb-3 d-flex justify-content-center">
                                             <div class="card mid-card align-items-center">
-                                                <img src="Image/product2.png" class="card-img-top img-fluid product-img"
-                                                    alt="">
+                                                <img src="Image/product2.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
                                                     <h5 class="card-title text-center">RinzWatch1</h5>
                                                     <p class="card-text">Some quick example text to build on the card
@@ -377,8 +388,8 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary me-3 home-btns"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
-                                                                class="bi bi-cart3"></i> Cart</a>
+                                                        <button  class="btn btn-primary home-btns cart-btn"> <i
+                                                                class="bi bi-cart3"></i> Cart</button>
 
                                                     </div>
 
@@ -387,8 +398,7 @@
                                         </div>
                                         <div class="col-12 col-md-6 col-lg-4  mb-3 d-flex justify-content-center">
                                             <div class="card mid-card align-items-center">
-                                                <img src="Image/product11.png"
-                                                    class="card-img-top img-fluid product-img" alt="">
+                                                <img src="Image/product11.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
                                                     <h5 class="card-title text-center">RinzWatch1</h5>
                                                     <p class="card-text">Some quick example text to build on the card
@@ -397,8 +407,8 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary home-btns me-3"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
-                                                                class="bi bi-cart3"></i> Cart</a>
+                                                        <button class="btn btn-primary home-btns cart-btn"> <i
+                                                                class="bi bi-cart3"></i> Cart</button>
 
                                                     </div>
 
@@ -412,8 +422,7 @@
                                         <div
                                             class="col-12 col-md-6 col-lg-4 mb-3 offset-md-0 d-flex justify-content-center">
                                             <div class="card mid-card align-items-center">
-                                                <img src="Image/product11.png"
-                                                    class="card-img-top img-fluid product-img" alt="">
+                                                <img src="Image/product11.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
                                                     <h5 class="card-title text-center">RinzWatch1 <span
                                                             class="badge text-bg-danger">New</span> <span
@@ -424,8 +433,8 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary home-btns me-3"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
-                                                                class="bi bi-cart3"></i> Cart</a>
+                                                        <button class="btn btn-primary home-btns cart-btn"> <i
+                                                                class="bi bi-cart3"></i> Cart</button>
 
                                                     </div>
 
@@ -435,8 +444,7 @@
 
                                         <div class="col-12 col-md-6 col-lg-4  mb-3 d-flex justify-content-center">
                                             <div class="card mid-card align-items-center">
-                                                <img src="Image/product3.png" class="card-img-top img-fluid product-img"
-                                                    alt="">
+                                                <img src="Image/product3.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
                                                     <h5 class="card-title text-center">RinzWatch1</h5>
                                                     <p class="card-text">Some quick example text to build on the card
@@ -445,8 +453,8 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary home-btns me-3"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
-                                                                class="bi bi-cart3"></i> Cart</a>
+                                                        <button class="btn btn-primary home-btns cart-btn"> <i
+                                                                class="bi bi-cart3"></i> Cart</button>
 
                                                     </div>
 
@@ -455,8 +463,7 @@
                                         </div>
                                         <div class="col-12 col-md-6 col-lg-4  mb-3 d-flex justify-content-center">
                                             <div class="card mid-card align-items-center">
-                                                <img src="Image/product2.png" class="card-img-top img-fluid product-img"
-                                                    alt="">
+                                                <img src="Image/product2.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
                                                     <h5 class="card-title text-center">RinzWatch1</h5>
                                                     <p class="card-text">Some quick example text to build on the card
@@ -465,8 +472,8 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary home-btns me-3"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
-                                                                class="bi bi-cart3"></i> Cart</a>
+                                                        <button class="btn btn-primary home-btns cart-btn"> <i
+                                                                class="bi bi-cart3"></i> Cart</button>
 
                                                     </div>
 
@@ -480,8 +487,7 @@
                                         <div
                                             class="col-12 col-md-6 col-lg-4 mb-3 offset-md-0 d-flex justify-content-center">
                                             <div class="card mid-card align-items-center">
-                                                <img src="Image/product3.png" class="card-img-top img-fluid product-img"
-                                                    alt="">
+                                                <img src="Image/product3.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
                                                     <h5 class="card-title text-center">RinzWatch1 <span
                                                             class="badge text-bg-danger">New</span> <span
@@ -492,8 +498,8 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary me-3 home-btns"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
-                                                                class="bi bi-cart3"></i> Cart</a>
+                                                        <button class="btn btn-primary home-btns cart-btn"> <i
+                                                                class="bi bi-cart3"></i> Cart</button>
 
                                                     </div>
                                                 </div>
@@ -502,8 +508,7 @@
 
                                         <div class="col-12 col-md-6 col-lg-4  mb-3 d-flex justify-content-center">
                                             <div class="card mid-card align-items-center">
-                                                <img src="Image/product2.png" class="card-img-top img-fluid product-img"
-                                                    alt="">
+                                                <img src="Image/product2.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
                                                     <h5 class="card-title text-center">RinzWatch1</h5>
                                                     <p class="card-text">Some quick example text to build on the card
@@ -512,8 +517,8 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary me-3 home-btns"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
-                                                                class="bi bi-cart3"></i> Cart</a>
+                                                        <button class="btn btn-primary home-btns cart-btn"> <i
+                                                                class="bi bi-cart3"></i> Cart</button>
 
                                                     </div>
 
@@ -522,8 +527,7 @@
                                         </div>
                                         <div class="col-12 col-md-6 col-lg-4  mb-3 d-flex justify-content-center">
                                             <div class="card mid-card align-items-center">
-                                                <img src="Image/product11.png"
-                                                    class="card-img-top img-fluid product-img" alt="">
+                                                <img src="Image/product11.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
                                                     <h5 class="card-title text-center">RinzWatch1</h5>
                                                     <p class="card-text">Some quick example text to build on the card
@@ -532,8 +536,8 @@
                                                     <div class="d-flex justify-content-center">
                                                         <a href="#" class="btn btn-primary home-btns me-3"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
-                                                        <a href="#" class="btn btn-primary home-btns cart-btn"> <i
-                                                                class="bi bi-cart3"></i> Cart</a>
+                                                        <button class="btn btn-primary home-btns cart-btn"> <i
+                                                                class="bi bi-cart3"></i> Cart</button>
 
                                                     </div>
 
@@ -664,10 +668,12 @@
                                         <i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star"></i>
                                     </div>
-                                    <p class="testimonial-text"><i class="fa-solid fa-quote-left"></i>It's like having a personal trainer who understands how
+                                    <p class="testimonial-text"><i class="fa-solid fa-quote-left"></i>It's like having a
+                                        personal trainer who understands how
                                         you work out — from running to yoga to swimming — and displays every metric you
                                         need right on your wrist. It's Designed For The Athlete In All Of Us, With
-                                        Innovations From Start To Finish Line.<i class="fa-solid fa-quote-right"></i></p>
+                                        Innovations From Start To Finish Line.<i class="fa-solid fa-quote-right"></i>
+                                    </p>
                                     <h6 class="text-center"><em>--Joyce, Pro Athlete--</em></h6>
                                 </div>
                             </div>
@@ -686,7 +692,8 @@
                                         <i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star-fill"></i>
                                     </div>
-                                    <p class="testimonial-text"><i class="fa-solid fa-quote-left"></i>This is fantastic; I was previously using a different
+                                    <p class="testimonial-text"><i class="fa-solid fa-quote-left"></i>This is fantastic;
+                                        I was previously using a different
                                         brand, but they would not stay clipped and would fall off my wrist during rucks,
                                         hikes, and runs. I desperately desired a watch-type. This smartwatch meets all
                                         of my hiking needs.<i class="fa-solid fa-quote-right"></i></p>
@@ -715,25 +722,25 @@
                 <div class="col-7 col-md-5 col-lg-3 ps-md-5">
                     <h5> Contact Address </h5>
                     <address>
-                        <p><i class="fa fa-location-dot fa-lg"></i> : 121,Clear water Bay Road Clear Water Bay, Kogi
+                        <p><i class="fa-solid fa-location-dot fa-lg"></i> : 121,Clear water Bay Road Clear Water Bay, Kogi
                             Nigeria <br>
                             <i class="fa fa-phone fa-lg"></i> : +234 810 635 7525<br>
                             <i class="fa fa-whatsapp fa-lg"></i> : +234 810 635 7525<br>
-                            <i class="fa fa-envelope fa-lg"></i> : <a
-                                href="mailto:ejicyrilarinze@gmail.com" class="here">RinzTech@info.net</a>
+                            <i class="fa fa-envelope fa-lg"></i> : <a href="mailto:ejicyrilarinze@gmail.com"
+                                class="here">RinzTech@info.net</a>
                         </p>
                     </address>
                 </div>
                 <div class="col-12 col-md-4 col-lg-3 text-center text-md-start mt-3 mt-md-0">
                     <h5> Connect with us</h5>
-                    <a class="mt-3 btn btn-outline-primary" href="http://google.com/+"><i
-                            class="fa fa-google-plus"></i></a>
-                    <a class="mt-3 btn btn-outline-primary" href="http://www.facebook.com/profile.php?id="><i
+                    <a class="mt-3 btn btn-outline-primary" href="http://google.com"><i
+                            class="fa fa-google"></i></a>
+                    <a class="mt-3 btn btn-outline-primary" href="http://www.facebook.com"><i
                             class="fa fa-facebook"></i></a>
-                    <a class="mt-3 btn btn-outline-primary" href="http://www.linkedin.com/in/"><i
+                    <a class="mt-3 btn btn-outline-primary" href="http://www.linkedin.com"><i
                             class="fa fa-linkedin"></i></a>
-                    <a class="mt-3 btn btn-outline-primary" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                    <a class="mt-3 btn btn-outline-primary" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                    <a class="mt-3 btn btn-outline-primary" href="http://twitter.com"><i class="fa fa-twitter"></i></a>
+                    <a class="mt-3 btn btn-outline-primary" href="http://youtube.com"><i class="fa fa-youtube"></i></a>
                 </div>
                 <div class="col-12 col-md-8 col-lg-4 offset-md-2 offset-lg-0 text-center text-lg-start mt-3 mt-md-0">
                     <h5>Newsletter</h5>
