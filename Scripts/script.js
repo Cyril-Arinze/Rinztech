@@ -53,7 +53,8 @@
       // Remove First Description in Cart
       var cart1Text = document.querySelector("#cart1text");
       cart1Text.classList.add("visually-hidden");
-
+      
+      // Add item to chart     
       var Add2Cart = this;
 
       var item = Add2Cart.parentElement.parentElement.parentElement;
@@ -83,6 +84,11 @@
 
         for (let i = 0; i < cartBadge.length; i++) {
           cartBadge[i].innerHTML = numberOfItemInCart;
+          
+          if (numberOfItemInCart > 9) {
+          
+            cartBadge[i].innerHTML = "9+";
+          }
         }
 
         if (numberOfItemInCart == 0) {
@@ -107,11 +113,14 @@
         cartBadge[i].classList.remove("visually-hidden");
 
         cartBadge[i].innerHTML = numberOfItemInCart;
+
+        if (numberOfItemInCart > 9) {
+          
+          cartBadge[i].innerHTML = "9+";
+        }
       }
 
-      if (numberOfItemInCart > 9) {
-        cartBadge.innerHTML = "9+";
-      }
+      
     });
   }
 

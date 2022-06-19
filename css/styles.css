@@ -16,7 +16,7 @@ h1,h2, h3, h4, h5, h6{
   border-right: 0;
 }
 .p-eye, .p-eye:hover {
-  border-color:  #ced4da;
+  border-color:  #0d6efd;
   border-left:0;
 }
 .login-hr{
@@ -46,6 +46,12 @@ h1,h2, h3, h4, h5, h6{
 .tweep-color-dark, .tweep-color-dark:hover{
   background-color:#1481c5;
   color: white
+}
+.login-links{
+  text-decoration: none;
+}
+.login-links:hover{
+  text-decoration: underline;
 }
 
 /******************************************** Navbar section ***************************/
@@ -132,6 +138,7 @@ hr{
 .mid-card {
   border-color:#0d6efd;
   border-width: 2px;
+  position: relative;
 }
 .card:hover{
   border-width: 2px;
@@ -144,6 +151,12 @@ hr{
 }
 .product-img{
   max-width: 20vh;
+}
+
+.brand-product{
+  position: absolute;
+  top: 15px;
+  left: 25px;
 }
 /************************ Testimonial section *******************/
 .testimonails-section{
@@ -161,8 +174,16 @@ hr{
 .test-car{
     padding: 1rem 1rem 5rem;
 }
-.sub-btn{
+.sub-btn, .form-control{
   border-radius: 25px;
+  border-color: #0d6efd;
+}
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color:#0d6efd;
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 .test-id{
   text-align: center;
