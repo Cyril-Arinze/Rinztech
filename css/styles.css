@@ -8,14 +8,17 @@ h2, h3, h4, h5, h6, p{
 h1,h2, h3, h4, h5, h6{
   font-family: 'Roboto', sans-serif;
 }
+.btn:focus{
+  box-shadow: none;
+}
 .carousel-indicators [data-bs-target]{
   background-color: #19181a;
   height: 4px;
 }
-.pass-w{
+.pass-w, .pass-w1, .pass-w2 {
   border-right: 0;
 }
-.p-eye, .p-eye:hover {
+.p-eye, .p-eye:hover,.p-eye1, .p-eye1:hover,.p-eye2, .p-eye2:hover {
   border-color:  #0d6efd;
   border-left:0;
 }
@@ -157,6 +160,16 @@ hr{
   position: absolute;
   top: 15px;
   left: 25px;
+}
+.new-badge{
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+.discount-badge{
+  position: absolute;
+  top: 15px;
+  right: 70px
 }
 /************************ Testimonial section *******************/
 .testimonails-section{

@@ -54,11 +54,17 @@
                                 class="fa-solid fa-microchip"></i>Rinz<span class="tech-span">Tech</span></a>
                     </div>
                     <div>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close close-loginForm" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                 </div>
                 <div class="modal-body">
-                    <form id="login-form" action="modal.php">
+                    <div class="visually-hidden login-error">
+                        <p class="text-center"><i class="bi bi-exclamation-octagon fa-xl"></i> Webpage is still under
+                            development. Try again later</p>
+                        <img src="Image/404 error.svg" class="img-fluid" alt="">
+                    </div>
+                    <form action="#" class="login-form" id="login-form">
                         <div class="row">
                             <div class="col-12 col-sm-3 mb-sm-3">
                                 <label for="username" class="col-form-label"><i class="bi bi-person-circle"></i>
@@ -81,7 +87,8 @@
                             </div>
                             <div class="col-12 col-sm-6 offset-sm-3 my-3 d-flex align-items-center">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="RememberPassword">
+                                    <input class="form-check-input" type="checkbox" name="RememberPassword"
+                                        id="RememberPassword">
                                     <label class="form-check-label" for="RememberPassword">
                                         Remember Password
                                     </label>
@@ -93,7 +100,8 @@
                                 </div>
                             </div>
                             <div class="col-5 col-sm-4 offset-sm-3 mt-3">
-                                <p> <a href="" class="login-links">Register Now</a></p>
+                                <a data-bs-toggle="modal" data-bs-target="#signUp-Modal" role="button"
+                                    class="login-links">Sign Up</a>
                             </div>
                             <div class="col-7 col-sm-5 mt-3">
                                 <p> <a href="" class="login-links">Forgot password?</a></p>
@@ -142,6 +150,85 @@
         </div>
     </div>
     <!-- login modal end here -->
+
+    <!--SignUp modal starts here -->
+    <div class="modal fade" id="signUp-Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="signUp-ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between">
+                    <div>
+                        <h5 class="modal-title" id="LoginModalLabel">Sign Up</h5>
+                    </div>
+                    <div>
+                        <a class="navbar-brand brand-name me-5" href="#Home"><i
+                                class="fa-solid fa-microchip"></i>Rinz<span class="tech-span">Tech</span></a>
+                    </div>
+                    <div>
+                        <button type="button" class="btn-close close-SignUpForm" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+
+                </div>
+                <div class="modal-body">
+                    <div class=" visually-hidden welcome text-center text-primary">
+                        <i class="bi bi-door-open-fill fa-4x "></i>
+                        <p>Welcome to RinzTech <br> You can now login to make purchase.❤</p>
+                        <img src="Image/welcome.svg" class="img-fluid" alt="">
+                    </div>
+                    <form action="" id="Signup-form">
+                        <div>
+                            <p>Please fill in this form to create an account!</p>
+                        </div>
+                        <div class="form-group mb-3">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6"><input type="text" class="form-control" name="first_name"
+                                        placeholder="First Name" required="required"></div>
+                                <div class="col-12 col-md-6"><input type="text" class="form-control" name="last_name"
+                                        placeholder="Last Name" required="required"></div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" name="username" placeholder="Username"
+                                required="required">
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Email"
+                                required="required">
+                        </div>
+                        <div class="form-group mb-3">
+                            <div class="input-group">
+                                <input type="password" name="password" placeholder="Password"
+                                    class="form-control pass-w1" required>
+                                <a class="btn p-eye1 sub-btn"><i class=" eye-icon1 bi bi-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <div class="input-group">
+                                <input type="password" name="password" placeholder="Confirm Password"
+                                    class="form-control pass-w2" required>
+                                <a class="btn p-eye2 sub-btn"><i class=" eye-icon2 bi bi-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a
+                                    class="login-links">Terms of Use</a> &amp; <a class="login-links">Privacy
+                                    Policy</a></label>
+                        </div>
+                        <div class="form-group mb-3">
+                            <button type="submit" class="btn btn-primary home-btns">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Already have an account? <a class="login-links close-SignUpForm" data-bs-toggle="modal"
+                            data-bs-target="#LoginModal" role="button">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SignUp modal ends here -->
+
 
     <!-- Cart modal starts here -->
     <div class="modal fade" id="CartModal" tabindex="-1" aria-labelledby="CartModalLabel" aria-hidden="true">
@@ -221,10 +308,10 @@
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge visually-hidden">
 
                             </span></a>
-                        <button data-bs-toggle="modal" data-bs-target="#LoginModal"
+                        <a data-bs-toggle="modal" data-bs-target="#LoginModal"
                             class="btn btn-outline-primary nav-btn home-btns"><i
                                 class="bi bi-box-arrow-in-right"></i></i>
-                            Login</button>
+                            Login</a>
                     </div>
 
                 </div>
@@ -369,15 +456,13 @@
                                             <div class="card mid-card align-items-center">
                                                 <img src="Image/product3.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
-                                                    <h5 class="card-title text-center">RinzWatch1 <span
-                                                            class="badge text-bg-danger">New</span> <span
-                                                            class="badge rounded-pill text-bg-warning">-20%</span></h5>
+                                                    <h5 class="card-title text-center">Rinzwatch S5</h5>
                                                     <p class="card-text">Some quick example text to build on the card
                                                         title and
                                                         make up the bulk of the card's content.</p>
                                                     <div class="d-flex justify-content-center">
-                                                        <a href="#" class="btn btn-primary me-3 home-btns"><i
-                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a class="btn btn-primary me-3 home-btns buy-btn"><i
+                                                                class="bi bi-credit-card "></i> Buy</a>
                                                         <button class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</button>
 
@@ -386,6 +471,8 @@
                                                 <a class="navbar-brand brand-name me-5 brand-product"><i
                                                         class="fa-solid fa-microchip"></i>Rinz<span
                                                         class="tech-span">Tech</span></a>
+                                                <span class="badge text-bg-danger new-badge">New</span><span
+                                                    class="badge rounded-pill text-bg-warning discount-badge">-20%</span>
                                             </div>
                                         </div>
 
@@ -393,13 +480,13 @@
                                             <div class="card mid-card align-items-center">
                                                 <img src="Image/product2.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
-                                                    <h5 class="card-title text-center">RinzWatch1</h5>
+                                                    <h5 class="card-title text-center">RinzWatch A4</h5>
                                                     <p class="card-text">Some quick example text to build on the card
                                                         title and
                                                         make up the bulk of the card's content.</p>
                                                     <div class="d-flex justify-content-center">
-                                                        <a href="#" class="btn btn-primary me-3 home-btns"><i
-                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a class="btn btn-primary me-3 home-btns buy-btn"><i
+                                                                class="bi bi-credit-card "></i> Buy</a>
                                                         <button class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</button>
 
@@ -420,7 +507,7 @@
                                                         title and
                                                         make up the bulk of the card's content.</p>
                                                     <div class="d-flex justify-content-center">
-                                                        <a href="#" class="btn btn-primary home-btns me-3"><i
+                                                        <a class="btn btn-primary home-btns me-3 buy-btn"><i
                                                                 class="bi bi-credit-card"></i> Buy</a>
                                                         <button class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</button>
@@ -441,15 +528,13 @@
                                             <div class="card mid-card align-items-center">
                                                 <img src="Image/product11.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
-                                                    <h5 class="card-title text-center">RinzWatch1 <span
-                                                            class="badge text-bg-danger">New</span> <span
-                                                            class="badge rounded-pill text-bg-warning">-20%</span></h5>
+                                                    <h5 class="card-title text-center">RinzWatch3 </h5>
                                                     <p class="card-text">Some quick example text to build on the card
                                                         title and
                                                         make up the bulk of the card's content.</p>
                                                     <div class="d-flex justify-content-center">
-                                                        <a href="#" class="btn btn-primary home-btns me-3"><i
-                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a class="btn btn-primary home-btns me-3 buy-btn"><i
+                                                                class="bi bi-credit-card "></i> Buy</a>
                                                         <button class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</button>
 
@@ -459,6 +544,8 @@
                                                 <a class="navbar-brand brand-name me-5 brand-product"><i
                                                         class="fa-solid fa-microchip"></i>Rinz<span
                                                         class="tech-span">Tech</span></a>
+                                                        <span class="badge text-bg-danger new-badge">New</span><span
+                                                    class="badge rounded-pill text-bg-warning discount-badge">-20%</span>
                                             </div>
                                         </div>
 
@@ -466,13 +553,13 @@
                                             <div class="card mid-card align-items-center">
                                                 <img src="Image/product3.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
-                                                    <h5 class="card-title text-center">RinzWatch1</h5>
+                                                    <h5 class="card-title text-center">RinzWatch E38</h5>
                                                     <p class="card-text">Some quick example text to build on the card
                                                         title and
                                                         make up the bulk of the card's content.</p>
                                                     <div class="d-flex justify-content-center">
-                                                        <a href="#" class="btn btn-primary home-btns me-3"><i
-                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a class="btn btn-primary home-btns me-3 buy-btn"><i
+                                                                class="bi bi-credit-card "></i> Buy</a>
                                                         <button class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</button>
 
@@ -488,13 +575,13 @@
                                             <div class="card mid-card align-items-center">
                                                 <img src="Image/product2.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
-                                                    <h5 class="card-title text-center">RinzWatch1</h5>
+                                                    <h5 class="card-title text-center">RinzWatch S55</h5>
                                                     <p class="card-text">Some quick example text to build on the card
                                                         title and
                                                         make up the bulk of the card's content.</p>
                                                     <div class="d-flex justify-content-center">
-                                                        <a href="#" class="btn btn-primary home-btns me-3"><i
-                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a class="btn btn-primary home-btns me-3 buy-btn"><i
+                                                                class="bi bi-credit-card "></i> Buy</a>
                                                         <button class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</button>
 
@@ -515,15 +602,13 @@
                                             <div class="card mid-card align-items-center">
                                                 <img src="Image/product3.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
-                                                    <h5 class="card-title text-center">RinzWatch1 <span
-                                                            class="badge text-bg-danger">New</span> <span
-                                                            class="badge rounded-pill text-bg-warning">-20%</span></h5>
+                                                    <h5 class="card-title text-center">RinzWatch33</h5>
                                                     <p class="card-text">Some quick example text to build on the card
                                                         title and
                                                         make up the bulk of the card's content.</p>
                                                     <div class="d-flex justify-content-center">
-                                                        <a href="#" class="btn btn-primary me-3 home-btns"><i
-                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a class="btn btn-primary me-3 home-btns buy-btn"><i
+                                                                class="bi bi-credit-card "></i> Buy</a>
                                                         <button class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</button>
 
@@ -532,6 +617,8 @@
                                                 <a class="navbar-brand brand-name me-5 brand-product"><i
                                                         class="fa-solid fa-microchip"></i>Rinz<span
                                                         class="tech-span">Tech</span></a>
+                                                        <span class="badge text-bg-danger new-badge">New</span><span
+                                                    class="badge rounded-pill text-bg-warning discount-badge">-20%</span>
                                             </div>
                                         </div>
 
@@ -539,13 +626,13 @@
                                             <div class="card mid-card align-items-center">
                                                 <img src="Image/product2.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
-                                                    <h5 class="card-title text-center">RinzWatch1</h5>
+                                                    <h5 class="card-title text-center">RinzWatch S7</h5>
                                                     <p class="card-text">Some quick example text to build on the card
                                                         title and
                                                         make up the bulk of the card's content.</p>
                                                     <div class="d-flex justify-content-center">
-                                                        <a href="#" class="btn btn-primary me-3 home-btns"><i
-                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a class="btn btn-primary me-3 home-btns buy-btn"><i
+                                                                class="bi bi-credit-card "></i> Buy</a>
                                                         <button class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</button>
 
@@ -561,13 +648,13 @@
                                             <div class="card mid-card align-items-center">
                                                 <img src="Image/product11.png" class="card-img-top img-fluid " alt="">
                                                 <div class="card-body">
-                                                    <h5 class="card-title text-center">RinzWatch1</h5>
+                                                    <h5 class="card-title text-center">RinzWatch A33</h5>
                                                     <p class="card-text">Some quick example text to build on the card
                                                         title and
                                                         make up the bulk of the card's content.</p>
                                                     <div class="d-flex justify-content-center">
-                                                        <a href="#" class="btn btn-primary home-btns me-3"><i
-                                                                class="bi bi-credit-card"></i> Buy</a>
+                                                        <a class="btn btn-primary home-btns me-3 buy-btn"><i
+                                                                class="bi bi-credit-card "></i> Buy</a>
                                                         <button class="btn btn-primary home-btns cart-btn"> <i
                                                                 class="bi bi-cart3"></i> Cart</button>
 
@@ -609,16 +696,16 @@
                             <tr>
                                 <th>&nbsp</th>
                                 <td class="text-center">
-                                    <h6>RinzWatch1</h6>
+                                    <h6>RinzWatch A33</h6>
                                 </td>
                                 <td class="text-center">
-                                    <h6>RinzWatch1</h6>
+                                    <h6>RinzWatch S7</h6>
                                 </td>
                                 <td class="text-center">
-                                    <h6>RinzWatch1</h6>
+                                    <h6>RinzWatch E38</h6>
                                 </td>
                                 <td class="text-center">
-                                    <h6>RinzWatch1</h6>
+                                    <h6>RinzWatch5</h6>
                                 </td>
                             </tr>
                         </thead>
@@ -751,7 +838,8 @@
                                         <i class="bi bi-star-fill"></i>
                                     </div>
                                     <p class="testimonial-text"><i class="fa-solid fa-quote-left"></i>In short, the
-                                        Rinztech Watch is the best smartwatch going, and the new series is the pinnacle of
+                                        Rinztech Watch is the best smartwatch going, and the new series is the pinnacle
+                                        of
                                         that experience. It replaces the older series at the same price, but with a
                                         significantly superior screen.<i class="fa-solid fa-quote-right"></i></p>
                                     <h6 class="text-center"><em>--Cyril, Researcher--</em></h6>
