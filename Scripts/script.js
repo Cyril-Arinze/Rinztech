@@ -175,8 +175,11 @@
 
       // alert user they have added item to cart
       const itemAddedTitle = itemClone.children[1].children[0].innerHTML;
-      alert(`You have added ${itemAddedTitle} to your cart`);
-
+      swal({
+        title: "Good job!",
+        text: `You have added ${itemAddedTitle} to your cart`,
+        icon: "success",
+      });
       // create button to remove item from cart
       const removeItemBtn = itemClone.children[1].children[2].children[1];
       removeItemBtn.innerHTML = "&#x2715 Remove";
@@ -191,6 +194,7 @@
         numberOfItemInCart--;
 
         let cartBadge = document.querySelectorAll(".cart-badge");
+        // update the number on the cart badge
         for (let i = 0; i < cartBadge.length; i++) {
           cartBadge[i].innerHTML = numberOfItemInCart;
 
@@ -269,9 +273,7 @@
   const buyBtn = document.querySelectorAll(".buy-btn");
   for (let i = 0; i < buyBtn.length; i++) {
     buyBtn[i].addEventListener("click", function () {
-      alert(
-        "Hello, esteemed customer. Please login or sign up to buy a product from our store"
-      );
+      swal("Oops!", "Hello, Esteemed customer. please login or sign up to buy a product from our store", "warning");
     });
   }
 })();
