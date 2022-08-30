@@ -276,4 +276,8 @@
       swal("Oops!", "Hello, Esteemed customer. please login or sign up to buy a product from our store", "warning");
     });
   }
+  // copyright year
+  const year = new Date().getFullYear();
+  const copyrightYear = document.querySelector(".copyright_year");
+  copyrightYear.innerHTML = year
 })();
